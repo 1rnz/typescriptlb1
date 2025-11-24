@@ -1,9 +1,16 @@
 {
   "compilerOptions": {
-    "target": "ES6",
+    // Змінено на ES2017 або новіше для підтримки Array.includes()
+    "target": "ES2020", 
     "module": "commonjs",
     "strict": true,
     "rootDir": "src",
-    "outDir": "dist"
+    "outDir": "dist",
+    
+    // Додайте це, щоб гарантувати, що TypeScript знає про сучасні методи
+    "lib": ["es2020", "dom"], 
+    
+    // Включаємо підтримку для імпорту/експорту CommonJS
+    "esModuleInterop": true
   }
 }
